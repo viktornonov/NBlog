@@ -50,3 +50,6 @@ _ReSharper*/
 
 # Office Temp Files
 ~$*
+
+#Backup folder
+[Bb]ackup/
