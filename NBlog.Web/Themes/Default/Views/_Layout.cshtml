@@ -43,8 +43,11 @@
                 @(Model.User.IsAuthenticated ? Html.Safe("<strong>" + Model.User.FriendlyName + "</strong> |") : Html.Blank())
                 @TwitterLink(@Model.Config.TwitterUsername)
                 @Html.ActionLink("RSS", "Index", "Feed") |
-                @Html.ActionLink("Contact", "Index", "Contact") |
-				@(Model.User.IsAuthenticated ? Html.ActionLink("Sign Out", "Logout", "Authentication") : Html.ActionLink("Sign In", "Login", "Authentication"))
+                @Html.ActionLink("Contact", "Index", "Contact") 
+				@if (Model.User.IsAuthenticated)
+                { 
+                        Html.ActionLink("Sign Out", "Logout", "Authentication");
+                }
 			</div>
 			<div id="search">
 				<form action="@Url.Action("Index", "Search")">

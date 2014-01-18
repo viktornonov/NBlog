@@ -1,17 +1,17 @@
 ﻿{
 	"Site": "localhost-8080",
 	"Theme": "Default",
-	"MetaDescription": "NBlog, an ASP.NET MVC 3.0 blog platform.",
-	"Heading": "NBlog",
-	"Title": "NBlog",
-	"Tagline": "A blog platform for ASP.NET MVC developers",
-	"Crossbar": "ASP.NET MVC 3.0, Razor, JSON.NET, Markdown, Autofac, AntiXSS, HTML5 & CSS3, OpenID, NSubstitute, ELMAH",
+	"MetaDescription": "Viktor Nonov blog, computer science, software engineering, programming",
+	"Heading": "Viktor Nonov's Blog",
+	"Title": "Viktor Nonov's Blog",
+	"Tagline": "some shitty things",
+	"Crossbar": "",
 	"Admins":
 	[
-		"http://vnonov.myopenid.com/"
+		"http://fuckoff.myopenid.com/"
 	],
 	"GoogleAnalyticsId": "",
-	"TwitterUsername": "twitter",
+	"TwitterUsername": "viktornonov",
 	"ContactForm":
 	{
 		"RecipientName": "NBlog Admin",

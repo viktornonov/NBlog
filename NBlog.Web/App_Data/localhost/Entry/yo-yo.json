@@ -3,7 +3,7 @@
   "Title": "yo yo",
   "Author": "vnonov.myopenid.com",
   "DateCreated": "2014-01-18T00:00:00",
-  "Markdown": "__yo madafaka__",
+  "Markdown": "__yo madafaka__\r\n\r\n    def asd\r\n    end\r\n\r\n",
   "IsPublished": true,
   "IsCodePrettified": true
 }
