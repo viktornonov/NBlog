@@ -42,6 +42,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>true</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -229,6 +230,8 @@
     <Content Include="Scripts\Fancybox\jquery.fancybox-1.3.2.pack.js" />
     <Content Include="Scripts\Fancybox\jquery.mousewheel-3.0.4.pack.js" />
     <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="App_Data\localhost\Entry\yo-yo.json" />
+    <None Include="Properties\PublishProfiles\nonov.net.pubxml" />
     <None Include="Scripts\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.3.js" />
     <Content Include="Scripts\jquery-2.0.3.min.js" />
@@ -237,9 +240,6 @@
     <Content Include="Jobs.config" />
     <Content Include="Jobs.Debug.config" />
     <Content Include="App_Data\localhost\Config\settings.json" />
-    <Content Include="App_Data\localhost\Entry\fusce-eget-neque-molestie-lorem-vestibulum-accumsan-sed-nec-augue.json" />
-    <Content Include="App_Data\localhost\Entry\lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit.json" />
-    <Content Include="App_Data\localhost\Entry\pellentesque-orci-mauris-imperdiet-et-varius-id.json" />
     <Content Include="Scripts\jquery-2.0.3.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />

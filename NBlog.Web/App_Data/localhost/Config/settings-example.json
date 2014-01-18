@@ -1,5 +1,5 @@
 ﻿{
-	"Site": "localhost-8080",
+	"Site": "nonov-net",
 	"Theme": "Default",
 	"MetaDescription": "Viktor Nonov blog, computer science, software engineering, programming",
 	"Heading": "Viktor Nonov's Blog",
@@ -8,10 +8,10 @@
 	"Crossbar": "",
 	"Admins":
 	[
-		"http://fuckoff.myopenid.com/"
+		""
 	],
 	"GoogleAnalyticsId": "",
-	"TwitterUsername": "viktornonov",
+	"TwitterUsername": "",
 	"ContactForm":
 	{
 		"RecipientName": "NBlog Admin",
