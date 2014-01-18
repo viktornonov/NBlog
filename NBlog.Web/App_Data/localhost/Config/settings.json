@@ -8,7 +8,7 @@
 	"Crossbar": "ASP.NET MVC 3.0, Razor, JSON.NET, Markdown, Autofac, AntiXSS, HTML5 & CSS3, OpenID, NSubstitute, ELMAH",
 	"Admins":
 	[
-		"http://cxfx.myopenid.com/"
+		"http://vnonov.myopenid.com/"
 	],
 	"GoogleAnalyticsId": "",
 	"TwitterUsername": "twitter",

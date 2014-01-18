@@ -40,7 +40,7 @@ namespace NBlog.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> OpenId(LoginModel model)
+        public ActionResult OpenId(LoginModel model)
         {
             Identifier id;
             if (Identifier.TryParse(model.OpenID_Identifier, out id))
@@ -49,13 +49,8 @@ namespace NBlog.Web.Controllers
                 {
                     var openId = new OpenIdRelyingParty();
                     var returnToUrl = new Uri(Url.Action("OpenIdCallback", "Authentication", new { ReturnUrl = model.ReturnUrl }, Request.Url.Scheme), UriKind.Absolute);
-                    var requestTask = openId.CreateRequestAsync(id, Realm.AutoDetect, returnToUrl);
+                    var request = openId.CreateRequest(id, Realm.AutoDetect, returnToUrl);
 
-                    await requestTask;
-                    var request = requestTask.Result;
-
-                    // add request for name and email using sreg (OpenID Simple Registration
-                    // Extension)
                     request.AddExtension(new ClaimsRequest
                     {
                         Email = DemandLevel.Require,
@@ -71,10 +66,7 @@ namespace NBlog.Web.Controllers
                     axRequest.Attributes.AddRequired(WellKnownAttributes.Contact.Email);
                     request.AddExtension(axRequest);
 
-                    var redirectingResponseTask = request.GetRedirectingResponseAsync();
-                    await redirectingResponseTask;
-
-                    return redirectingResponseTask.Result.AsActionResult();
+                    return request.RedirectingResponse.AsActionResult();
                 }
                 catch (ProtocolException ex)
                 {
@@ -91,15 +83,12 @@ namespace NBlog.Web.Controllers
 
         [HttpGet]
         [ValidateInput(false)]
-        public async Task<ActionResult> OpenIdCallback(string returnUrl)
+        public ActionResult OpenIdCallback(string returnUrl)
         {
             var model = new LoginModel { ReturnUrl = returnUrl };
             var openId = new OpenIdRelyingParty();
-            var openIdResponseTask = openId.GetResponseAsync();
+            var openIdResponse = openId.GetResponse();
 
-            await openIdResponseTask;
-
-            var openIdResponse = openIdResponseTask.Result;
             if (openIdResponse.Status == AuthenticationStatus.Authenticated)
             {
                 var friendlyName = GetFriendlyName(openIdResponse);

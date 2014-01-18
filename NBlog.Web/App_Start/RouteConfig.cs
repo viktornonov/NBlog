@@ -12,7 +12,7 @@ namespace NBlog.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.RouteExistingFiles = false;
-            routes.LowercaseUrls = true;
+//            routes.LowercaseUrls = true;
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
