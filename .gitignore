@@ -4,7 +4,9 @@ NBlog.Web.Publish.xml
 chrisfulstow-com/
 mongoleaf-com/
 MongoLeaf/
-localhost/Config/
+Config/
+Assemblies/
+PublishProfiles/
 
 #OS junk files
 [Tt]humbs.db
