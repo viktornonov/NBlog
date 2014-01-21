@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Web;
-using System.Web.Mvc;
-using NBlog.Web.Application;
-using NBlog.Web.Application.Infrastructure;
+﻿using NBlog.Web.Application.Infrastructure;
 using NBlog.Web.Application.Service;
+using NBlog.Web.Models;
+using System.Net.Mail;
+using System.Web.Mvc;
 
 namespace NBlog.Web.Controllers
 {
@@ -17,11 +13,11 @@ namespace NBlog.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new IndexModel());
+            return View(new Contact());
         }
 
         [HttpPost]
-        public ActionResult Index(IndexModel model)
+        public ActionResult Index(Contact model)
         {
             if (!ModelState.IsValid)
                 return View();

@@ -6,6 +6,7 @@ using DotNetOpenAuth.OpenId.RelyingParty;
 using NBlog.Web.Application;
 using NBlog.Web.Application.Infrastructure;
 using NBlog.Web.Application.Service;
+using NBlog.Web.Models;
 using System;
 using System.Threading.Tasks;
 using System.Web;
@@ -25,7 +26,7 @@ namespace NBlog.Web.Controllers
         [HttpGet]
         public ActionResult Login(string returnUrl)
         {
-            var model = new LoginModel { ReturnUrl = returnUrl.AsNullIfEmpty() ?? Url.Action("Index", "Home") };
+            var model = new Login { ReturnUrl = returnUrl.AsNullIfEmpty() ?? Url.Action("Index", "Home") };
             return View(model);
         }
 
@@ -40,7 +41,7 @@ namespace NBlog.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult OpenId(LoginModel model)
+        public ActionResult OpenId(Login model)
         {
             Identifier id;
             if (Identifier.TryParse(model.OpenID_Identifier, out id))
@@ -85,7 +86,7 @@ namespace NBlog.Web.Controllers
         [ValidateInput(false)]
         public ActionResult OpenIdCallback(string returnUrl)
         {
-            var model = new LoginModel { ReturnUrl = returnUrl };
+            var model = new Login { ReturnUrl = returnUrl };
             var openId = new OpenIdRelyingParty();
             var openIdResponse = openId.GetResponse();
 

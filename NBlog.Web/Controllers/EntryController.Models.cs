@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NBlog.Web.Application.Infrastructure;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using NBlog.Web.Application;
-using NBlog.Web.Application.Infrastructure;
 
 namespace NBlog.Web.Controllers
 {

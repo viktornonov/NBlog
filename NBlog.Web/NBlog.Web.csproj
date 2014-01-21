@@ -232,15 +232,11 @@
     <Content Include="Scripts\jquery-1.4.4.min.js" />
     <Content Include="App_Data\localhost\Entry\yo-yo.json" />
     <None Include="Properties\PublishProfiles\nonov.net.pubxml" />
-    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
-    <Content Include="Scripts\jquery-2.0.3.js" />
-    <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Jobs.config" />
     <Content Include="Jobs.Debug.config" />
     <Content Include="App_Data\localhost\Config\settings.json" />
-    <Content Include="Scripts\jquery-2.0.3.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -356,11 +352,9 @@
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\AuthenticationController.Models.cs" />
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\ContactController.Models.cs" />
     <Compile Include="Controllers\EntryController.cs" />
     <Compile Include="Controllers\EntryController.Models.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
-    <Compile Include="Controllers\ErrorController.Models.cs" />
     <Compile Include="Controllers\FeedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.Models.cs" />
@@ -370,6 +364,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -393,9 +390,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

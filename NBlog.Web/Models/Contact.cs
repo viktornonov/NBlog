@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NBlog.Web.Application.Infrastructure;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using NBlog.Web.Application;
-using NBlog.Web.Application.Infrastructure;
 
-namespace NBlog.Web.Controllers
+namespace NBlog.Web.Models
 {
-    public partial class ContactController
+    public class Contact : LayoutModel
     {
-        public class IndexModel : LayoutModel
-        {
             [DisplayName("Your name")]
             [Required(ErrorMessage = "Please enter your name.")]
             public string SenderName { get; set; }
@@ -23,6 +16,5 @@ namespace NBlog.Web.Controllers
 
             [Required(ErrorMessage = "Please enter your message.")]
             public string Message { get; set; }
-        }
     }
 }

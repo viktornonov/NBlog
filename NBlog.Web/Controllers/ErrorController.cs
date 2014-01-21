@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using NBlog.Web.Application.Infrastructure;
+using NBlog.Web.Application.Service;
+using NBlog.Web.Models;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using NBlog.Web.Application;
-using NBlog.Web.Application.Infrastructure;
-using NBlog.Web.Application.Service;
 
 namespace NBlog.Web.Controllers
 {
@@ -16,7 +13,7 @@ namespace NBlog.Web.Controllers
 
         public ActionResult Index()
         {
-            var model = new ErrorModel();
+            var model = new Error();
             var httpException = RouteData.Values["httpException"] as HttpException;
 
             var httpCode = (httpException == null) ? 500 : httpException.GetHttpCode();
